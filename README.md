@@ -4,6 +4,25 @@ pre-commit-golang
 
 golang hooks for http://pre-commit.com/
 
+# Purpose
+The purpose of pre-commit hooks is to implement automated quality checks before code is committed to maintain a clean codebase and git history.
+
+## Requirements
+* [python](https://www.python.org/)
+* [pre-commit](https://pre-commit.com/)
+* [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+## Setup
+`pre-commit install` to install the local `.pre-commit-config.yaml`, this will identify which repo (including version) and hooks to run. `pre-commit` will now run on every `git commit`
+
+`pre-commit run <hook_id>` can run a specific hook.
+
+`pre-commit run --all-files` can be used to run all commands.
+
+## Local Development
+- Can be used to test new or existing scripts on your local machine.
+https://pre-commit.com/#repository-local-hooks
+
 ### Using these hooks
 
 Add this to your `.pre-commit-config.yaml`
