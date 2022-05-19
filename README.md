@@ -10,7 +10,6 @@ The purpose of pre-commit hooks is to implement automated quality checks before 
 ## Requirements
 * [python](https://www.python.org/)
 * [pre-commit](https://pre-commit.com/)
-* [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
 ## Setup
 `pre-commit install` to install the local `.pre-commit-config.yaml`, this will identify which repo (including version) and hooks to run. `pre-commit` will now run on every `git commit`
