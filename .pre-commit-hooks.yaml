@@ -16,13 +16,12 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `go vet`, requires golang"
--   id: golangci-lint
-    name: 'golangci-lint'
-    description: 'Fast linters runner for Go.'
-    entry: golangci-lint run --fix
-    types: [go]
-    language: golang
-    pass_filenames: false
+-   id: go-lint
+    name: 'go lint'
+    entry: run-go-lint.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `golint`, requires https://github.com/golang/lint"
 -   id: go-cyclo
     name: 'go-cyclo'
     entry: run-go-cyclo.sh
