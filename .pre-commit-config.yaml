@@ -2,7 +2,7 @@
     rev: master 
     hooks:
       - id: go-fmt
-      - id: go-lint
+      - id: golangci-lint
       - id: go-unit-tests
       - id: go-build
       - id: go-mod-tidy
