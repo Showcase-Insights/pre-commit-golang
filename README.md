@@ -12,6 +12,15 @@ The purpose of pre-commit hooks is to implement automated quality checks before 
 * [pre-commit](https://pre-commit.com/)
 
 ## Setup
+In order to automatically enable `pre-commit` for all future repositories that you clone, follow the steps below (Can also be found here: https://pre-commit.com/#automatically-enabling-pre-commit-on-repositories)
+1. Copy over `git`'s `init.templateDir` to a new directory
+    - `git config --global init.templateDir ~/.git-template`
+2. Assign the template directory to pre-commit
+    - `pre-commit init-templatedir ~/.git-template`
+
+Once this is done, every newly cloned git repository should automatically run the appropriate hooks, the `--allow-missing-flag` can be used for repositories that don't have `pre-commit` installed.
+
+
 `pre-commit install` to install the local `.pre-commit-config.yaml`, this will identify which repo (including version) and hooks to run. `pre-commit` will now run on every `git commit`
 
 `pre-commit run <hook_id>` can run a specific hook.
